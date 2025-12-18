@@ -1,16 +1,21 @@
 const prompt = require("prompt-sync")();
+tab = [];
+count = 0;
+for (let i = 0; i < 6; i++) {
+  let n = prompt(" entrez un nombre n ");
+  tab.push(n);
+}
+console.log(tab);
 
-function compterOccurrences(tab) {
+function compterOccurrences() {
   let valeur = Number(prompt("Valeur à chercher : "));
-  let count = 0;
-
   for (let i = 0; i < tab.length; i++) {
-    if (tab[i] === valeur) {
+    if (valeur == tab[i]) {
       count++;
     }
   }
-
-  return count;
+  console.log(count);
+  
 }
 
-console.log("Occurrences :", compterOccurrences(tableau));
+compterOccurrences();
